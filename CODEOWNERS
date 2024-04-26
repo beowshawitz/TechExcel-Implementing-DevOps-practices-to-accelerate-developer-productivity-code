@@ -1,0 +1,9 @@
+##########################################
+#             code ownership
+##########################################
+
+# default ownership: default owners for everything in the repo (Unless a later match takes precedence)
+*    @beowshawitz
+
+# (Order is important, the last matching pattern takes the most precedence)
+/Application/ @beowshawitz
