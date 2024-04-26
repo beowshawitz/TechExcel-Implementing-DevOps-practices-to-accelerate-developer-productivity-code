@@ -22,8 +22,10 @@ jobs:
       with:
         languages: "csharp" # change this to the languages you want to scan
 
-    - name: Autobuild
-      uses: github/codeql-action/autobuild@v1
+    - name: Restore dependencies
+      run: dotnet restore ./Application/src/RazorPagesTestSample/RazorPagesTestSample.csproj
+    - name: Build
+      run: dotnet build --no-restore ./Application/src/RazorPagesTestSample/RazorPagesTestSample.csproj
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v1
