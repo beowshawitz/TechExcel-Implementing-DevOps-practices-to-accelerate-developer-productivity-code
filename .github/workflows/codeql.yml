@@ -20,7 +20,7 @@ jobs:
     - name: Initialize CodeQL
       uses: github/codeql-action/init@v1
       with:
-        languages: "javascript,python,c#,csharp" # change this to the languages you want to scan
+        languages: "javascript,cs" # change this to the languages you want to scan
 
     - name: Autobuild
       uses: github/codeql-action/autobuild@v1
